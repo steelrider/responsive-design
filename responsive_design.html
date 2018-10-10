@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1" charset="utf-8">
+<style>
+*{
+    box-sizing: border-box; 
+	font-family: Bookman Old Style;
+}
+.options{
+    display: none;
+	position: absolute;
+	min-width: 240px;
+	z-index: 1;
+	background-color: #1e90ff;
+	font-size: 26px;
+	border-radius: 8px;
+	margin-top: 1%;
+}
+.options a{
+    color: black;
+	padding 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	max-width: 240px;
+}
+@media screen and (min-width: 1280px){
+    .menubtn{
+    background-color: #00bfff;
+	font-size: 26px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	min-width: 240px;
+	text-align: center;
+    }
+	.slides{
+	width: 80%;
+	float: left;
+    }
+	.newscol1{
+	    width: 23.5%;
+		float: left;
+		border-right: solid black;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	.newscol2{
+	    width: 23.5%;
+		float: left;
+		border-right: solid black;
+	}
+	.newscol3{
+	    width: 23.5%;
+		float: left;
+		margin-left: 1%;
+		margin-right: 1%;
+		border-right: solid black;
+	}
+	.newscol4{
+	    width: 23.5%;
+		float: left;
+		margin-right: 1%
+	}
+	.topmenu{
+    text-align: center;
+    width: 100%;
+    }
+}
+@media screen and (max-width: 585px){
+    .menubtn{
+    background-color: #00bfff;
+	font-size: 26px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	min-width: 240px;
+	margin-top: 2%;
+	text-align: center;
+    }
+	.options{
+    display: none;
+	min-width: 240px;
+	z-index: 1;
+	background-color: #1e90ff;
+	font-size: 26px;
+	border-radius: 8px;
+	margin-top: 1%;
+    }
+	.logo{
+    float: left;
+    position: relative;
+    max-width: 80px;
+	max-height: 80px;
+	display: none;
+    }
+	.leftcol{
+	display: none;
+    }
+    .rightcol{
+	display: none;
+    }
+	.slides{
+	width: 100%;
+	float: center;
+    }
+	.topmenu{
+    text-align: center;
+    width: 100%;
+    }
+	.newscol1{
+	    width: 100%;
+		float: left;
+	}
+	.newscol2{
+	    width: 100%;
+		float: left;
+	}
+	.newscol3{
+	    width: 100%;
+		float: left;
+	}
+	.newscol4{
+	    width: 100%;
+		float: left;
+	}	
+}
+@media screen and (max-width: 500px){
+    .menubtn{
+    background-color: #00bfff;
+	font-size: 26px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	min-width: 240px;
+	margin-top: 2%;
+	text-align: center;
+    }
+	.options{
+    display: none;
+	position: relative;
+	min-width: 240px;
+	z-index: 1;
+	background-color: #1e90ff;
+	font-size: 26px;
+	border-radius: 8px;
+	margin-top: 1%;
+    }
+	.logo{
+    float: left;
+    position: relative;
+    max-width: 80px;
+	max-height: 80px;
+	display: none;
+    }
+	.leftcol{
+	display: none;
+    }
+    .rightcol{
+	display: none;
+    }
+	.slides{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+    }
+	.topmenu{
+    text-align: center;
+    width: 100%;
+    }
+	.newscol1{
+	    width: 100%;
+		float: left;
+	}
+	.newscol2{
+	    width: 100%;
+		float: left;
+	}
+	.newscol3{
+	    width: 100%;
+		float: left;
+	}
+	.newscol4{
+	    width: 100%;
+		float: left;
+	}
+}
+@media screen and (max-width: 1279px) and (min-width: 585px){
+    .menubtn{
+    background-color: #00bfff;
+	font-size: 26px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	min-width: 240px;
+	margin-top: 2%;
+	text-align: center;
+    }
+	.leftcol{
+	display: none;
+    }
+    .rightcol{
+	display: none;
+    }
+	.slides{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+    }
+    .topmenu{
+    text-align: center;
+    width: 100%;
+    }
+	.newscol1{
+	    width: 49.5%;
+		float: left;
+		border-right: solid black;
+		margin-right: 1%;
+	}
+	.newscol2{
+	    width: 49.5%;
+		float: left;
+	}
+	.newscol3{
+	    width: 49.5%;
+		float: left;
+		margin-right: 1%;
+		border-right: solid black;
+	}
+	.newscol4{
+	    width: 49.5%;
+		float: left;
+	}
+}
+.dropmenu{
+    position: relative;
+	display: inline-block;
+}
+.show{
+    display: block;
+}
+.logo{
+    float: left;
+    position: relative;
+    max-width: 80px;
+	max-height: 80px;
+	z-index: 1;
+}
+body{
+    height: 100%;
+	background-image: url("bg.png");
+	background-repeat: no-repeat;
+}
+.sliderimg{
+    display: block;
+	width: 100%;
+	max-height: 650px;
+}
+.topnews{
+    font-size: 22px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+.slides{
+	width: 80%;
+}
+.leftcol{
+    width: 10%;
+	float: left;
+	word-wrap: break-word;
+	padding-top: 1%;
+	text-align: left;
+}
+.rightcol{
+    width: 10%;
+	float: left;
+	word-wrap: break-word;
+	padding-top: 1%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 650px;
+	padding-left: 15px;
+	text-justify: initial;
+}
+.news{
+    width: 100%;
+	float: left;
+	margin-top: 1%;
+	text-align: center;
+    font-size: 32px;
+	border-top: solid black;
+	border-bottom: solid black;
+}
+.footer{
+    width: 100%;
+	float: left;
+    background-color: #00bfff;
+	text-align: center;
+}
+</style>
+<script>
+function menuFunc1() {
+    document.getElementById("opts1").classList.toggle("show");
+	document.getElementById("opts2").classList.remove("show");
+	document.getElementById("opts3").classList.remove("show");
+	document.getElementById("opts4").classList.remove("show");
+}
+function menuFunc2() {
+	document.getElementById("opts1").classList.remove("show");
+	document.getElementById("opts2").classList.toggle("show");
+	document.getElementById("opts3").classList.remove("show");
+	document.getElementById("opts4").classList.remove("show");
+}
+function menuFunc3() {
+	document.getElementById("opts1").classList.remove("show");
+	document.getElementById("opts2").classList.remove("show");
+	document.getElementById("opts3").classList.toggle("show");
+	document.getElementById("opts4").classList.remove("show");
+}
+function menuFunc4() {
+	document.getElementById("opts1").classList.remove("show");
+	document.getElementById("opts2").classList.remove("show");
+	document.getElementById("opts3").classList.remove("show");
+	document.getElementById("opts4").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.menubtn')) {
+
+    var dropdowns = document.getElementsByClassName("options");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+<body>
+
+<div><img src="logo.png" class="logo"></img></div>
+
+<div class="topmenu">
+<div class="dropmenu">
+<button onclick="menuFunc1()" class="menubtn">Новини</button>
+  <div id="opts1" class="options">
+    <a href="#home">Политика</a></br>
+    <a href="#home">Наука и образование</a></br>
+    <a href="#about">Изкуство и музика</a></br>
+    <a href="#contact">Черна хроника</a>
+  </div>
+</div>
+<div class="dropmenu">
+<button onclick="menuFunc2()" class="menubtn">Архив</button>
+  <div id="opts2" class="options">
+    <a href="#home">Юни 2018</a></br>
+    <a href="#about">2017</a></br>
+    <a href="#contact">2016</a>
+  </div>
+</div>
+<div class="dropmenu">
+<button onclick="menuFunc3()" class="menubtn">За нас</button>
+  <div id="opts3" class="options">
+    <a href="#home">Офиси</a></br>
+    <a href="#about">Контакти</a></br>
+    <a href="#contact">Състав</a>
+  </div>
+</div>
+<div class="dropmenu">
+<button onclick="menuFunc4()" class="menubtn">Изпрати новина</button>
+  <div id="opts4" class="options">
+    <a href="#home">Идея за статия</a></br>
+    <a href="#about">Потребителско видео</a>
+  </div>
+</div>
+<div class="imgnews">
+<p class="topnews"><b>Доставка на нови полицейски автомобили за четвърто РПУ</p>
+<p class="topnews">Празнична програма 16-23 юли</p>
+<p class="topnews">Приключението Матерхорн</b></p>
+</div>
+</div>
+
+<div class="leftcol">
+<h3 style="text-align:center;">Времето</h3>
+<li>София - 23°/36°</li>
+<li>Пловдив - 24°/39°</li>
+<li>Варна - 21°/33°</li>
+<li>Бургас - 21°/34°</li>
+<li>Враца - 19°/31°</li>
+<li>Велико Търново - 20°/32°</li>
+<li>Благоевград - 16°/31°</li>
+<li>Видин - 23°/34°</li>
+</div>
+
+<div class="slides">
+    <img class="sliderimg" src="slide1.jpg"></img>
+    <img class="sliderimg" src="slide2.jpg"></img>
+    <img class="sliderimg" src="slide3.jpg"></img>
+</div>
+
+<div class="rightcol">
+<h3 style="text-align:center;">Случайна статия</h3>
+Новинарската статия цели навременното предоставяне на информация по актуална тема. Обикновено такава статия бързо губи от
+своята стойност с времето и затова се стреми да привлече и задържи вниманието на читателя на момента.
+Новинарските статии се публикуват в новинарски печатни издания
+ (вестници, осведомителни бюлетини, новинарски списания) или новинарски интернет сайтове.
+Статиите могат да бъдат за масовия читател (например в ежедневниците) или специализирани (за борсови новини, в политически журнали или уебсайт за технологии). 
+</div>
+
+<div class="news">Водещи новини</div>
+
+<div class="newscol1">
+<p style="text-align:center;font-size:22px;"><b>Oпасност от наводнения в следващите дни</b></p>
+<p>Оранжев код за интензивни валежи и гръмотевични бури е обявен за днес в 9 области на страната. Предупреждението е в
+сила за Велико Търново, Габрово, Сливен, Стара Загора, Пловдив, Бургас,
+Ямбол, Хасково и Кърджали. В останалата част от страна кодът е жълт с изключение на областите Видин, Перник, Кюстендил и Благоевград.</br></br>
+„Нивата на реките в почти цялата страна са около праговете за средни води. На много малко места, в някои планински притоци, са високи. От валежите следобед ще 
+започне постепенно повишение на нивата в почти цялата страна. По-интензивно ще е покачването на нивата утре в сутрешните часове.
+
+Първо това ще стане във водосборите на реките Русенски Лом и Добруджанските реки. Там очакваме в сутрешните часове възможност за наводнения.</br></br>
+В черноморските реки също има опасност от наводнения, най-значителни във водосборите на река Провадийска, Камчия, над язовир Камчия, както и в южночерноморските реки – най-голяма вероятност
+за поройни наводнения има във водосборите на река Велека и река Резовка, където са възможни и речни наводнения.</p>
+</div>
+<div class="newscol2">
+<p style="text-align:center;font-size:22px;"><b>Главните опасности, дебнещи в обществените тоалетни</b></p>
+<p>Учени посочиха кои са най-опасните точки на зараза, които ни дебнат от обществените тоалетни - това са салфетките, сапунът и вратите, съобщава сайтът Лайф.
+До тях най-често се докосват повечето посетители на обществените тоалетни, пише научното списание "Conversation".
+Това е причината по тези повърхности да се натрупват най-много вредни бактерии.
+По-мръсни от тоалетна чиния: пакeтчетата чай в офиса.</br></br>
+Освен това източници на зараза са бравите на вратите, тъй като не всеки ползвател на обществените тоалетни си измива ръцете.
+Учените изтъкват, че сядането върху тоалетната чиния не е опасно за здравето, както мнозина си мислят. Рискът от заразяване с чревни инфекции е доста малък, тъй като основният
+ път за попадането на микробите в организма е през ръцете и устата.
+Специалисти разкриха как да си мием ефикасно ръцете
+Авторите на статията препоръчват затварянето на кранчето и отварянето на вратата на тоалетната да става с книжна салфетка - тогава контактът с бактериите може да бъде избегнат.</p>
+</div>
+<div class="newscol3">
+<p style="text-align:center;font-size:22px;"><b>Немската обществена телевизия АРД поиска оставката на Меркел</b></p>
+<p>Кореспондент на немската обществено-правна телевизия АРД в Брюксел съобщи, че телевизията е поискала оставката на германския канцлер Ангела Меркел.
+Това се случва за първи път в историята на германска обществено-правна телевизия.
+Новината е публикувана и на официалния сайт на телевизията.</br></br>
+До това се стигна след коментар на недоволство и яростни нападки към германския канцлер.
+Ето и част от него:
+„ЕС се приближава към разпад: в една от най-важните области на политиката на нашето време – въпросите, свързани с имиграцията - нищо не работи. 
+Освен отправяне на евтини изявления като "външните граници трябва наистина да бъдат защитени", държавните и правителствените ръководители не правят нищо. Със сигурност това се 
+отнася и за германския канцлер.“</br></br>
+„От 2011 и 2012 г. броят на хората, които търсят убежище в Европа, бавно, но стабилно нараства. Канцлерът досега имаше зад себе си многобройната "европейска солидарност".
+ Под натиска на Меркел ЕС мълчаливо се съгласяваше да приема бежанци. Но от есента на 2015 г., тя все по-малко може да разчита на "европейската солидарност".
+„След 13-годишното канцлерство на Ангела Меркел, сега е необходимо ново начало за ЕС. Общи, европейски решения, без които няма да се справим с миграционния проблем. 
+Трябва да се спре неизбежната тенденция на европейското разделение! Управлението трябва да се поеме от наследник, чието име все още се чува в Европа. Който се осмелява да следва
+ наистина интересите на всички! Нека дръзнем за ново начало!“</p>
+</div>
+<div class="newscol4">
+<p style="text-align:center;font-size:22px;"><b>Цената на „Джак Даниелс” скача с 10% в ЕС заради митата</b></p>
+<p>Цената на американското уиски "Джак Даниелс" (Jack Daniel's) в ЕС ще скочи с около 10% благодарение на наложените от съюза вносни мита. 
+Това предупреди американският производител на уиски, цитиран от вестник "Индипендънт".</br></br>
+Говорител на американската компания за производство на алкохол Brown-Foreman съобщи, че цената може да се увеличи с 10%, 
+когато запасите на дистрибуторите се изразходят през следващите месеци. Увеличението ще варира на различните пазари, 
+защото местните дистрибутори и търговци също определят цените, добави представителят.
+По-рано този месец компанията предупреди, че изгледът за търговска война затруднява Brown-Foreman да излезе с точна
+прогноза за бъдещите приходи. 25% от приходите на компанията са от продажби в Европа.</p>
+</div>
+
+<div class="footer">
+Всички права запазени. Фирмата запаза правото си да променя статиите с цел предоставяне на достоверна информация. © 2018.
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("sliderimg");
+	var y = document.getElementsByClassName("topnews");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+	   y[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+	y[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4500); // Change image every 2 seconds
+}
+</script>
+
+</body>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
